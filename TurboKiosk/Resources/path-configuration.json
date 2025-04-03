@@ -1,0 +1,25 @@
+{
+  "settings": {
+    "enable-feature-x": true
+  },
+  "rules": [
+    {
+      "patterns": [
+        "/kiosk/index",
+        "/kiosk/auth"
+      ],
+      "properties": {
+        "presentation": "replace"
+      }
+    },
+    {
+      "patterns": [
+        "/kiosk/fundraisers",
+        "/kiosk/*"
+      ],
+      "properties": {
+        "presentation": "replace"
+      }
+    }
+  ]
+}

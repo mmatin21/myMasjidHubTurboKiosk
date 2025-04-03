@@ -6,6 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		85B6F5872D9CDFAB00821086 /* Turbo in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5862D9CDFAB00821086 /* Turbo */; };
+		85B6F5902D9CE1BD00821086 /* Stripe in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F58F2D9CE1BD00821086 /* Stripe */; };
+		85B6F5922D9CE1BD00821086 /* StripeApplePay in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5912D9CE1BD00821086 /* StripeApplePay */; };
+		85B6F5942D9CE1BD00821086 /* StripeCardScan in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5932D9CE1BD00821086 /* StripeCardScan */; };
+		85B6F5962D9CE1BD00821086 /* StripeConnect in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5952D9CE1BD00821086 /* StripeConnect */; };
+		85B6F5982D9CE1BD00821086 /* StripeFinancialConnections in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5972D9CE1BD00821086 /* StripeFinancialConnections */; };
+		85B6F5F02D9CE89900821086 /* StripeIdentity in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5EF2D9CE89900821086 /* StripeIdentity */; };
+		85B6F5F22D9CE89900821086 /* StripePaymentSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5F12D9CE89900821086 /* StripePaymentSheet */; };
+		85B6F5F42D9CE89900821086 /* StripePayments in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5F32D9CE89900821086 /* StripePayments */; };
+		85B6F5F62D9CE89900821086 /* StripePaymentsUI in Frameworks */ = {isa = PBXBuildFile; productRef = 85B6F5F52D9CE89900821086 /* StripePaymentsUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		85B6F55A2D9CD86A00821086 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +42,33 @@
 		85B6F5632D9CD86B00821086 /* TurboKioskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurboKioskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		85B6F5E92D9CE58C00821086 /* Exceptions for "TurboKiosk" folder in "TurboKiosk" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/JavaScriptBridge.js,
+			);
+			target = 85B6F5482D9CD86A00821086 /* TurboKiosk */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		85B6F5EA2D9CE58C00821086 /* Exceptions for "TurboKiosk" folder in "Compile Sources" phase from "TurboKiosk" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 85B6F5452D9CD86A00821086 /* Sources */;
+			membershipExceptions = (
+				Resources/JavaScriptBridge.js,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		85B6F54B2D9CD86A00821086 /* TurboKiosk */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				85B6F5E92D9CE58C00821086 /* Exceptions for "TurboKiosk" folder in "TurboKiosk" target */,
+				85B6F5EA2D9CE58C00821086 /* Exceptions for "TurboKiosk" folder in "Compile Sources" phase from "TurboKiosk" target */,
+			);
 			path = TurboKiosk;
 			sourceTree = "<group>";
 		};
@@ -52,6 +89,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85B6F5F42D9CE89900821086 /* StripePayments in Frameworks */,
+				85B6F5F22D9CE89900821086 /* StripePaymentSheet in Frameworks */,
+				85B6F5942D9CE1BD00821086 /* StripeCardScan in Frameworks */,
+				85B6F5982D9CE1BD00821086 /* StripeFinancialConnections in Frameworks */,
+				85B6F5922D9CE1BD00821086 /* StripeApplePay in Frameworks */,
+				85B6F5F02D9CE89900821086 /* StripeIdentity in Frameworks */,
+				85B6F5872D9CDFAB00821086 /* Turbo in Frameworks */,
+				85B6F5902D9CE1BD00821086 /* Stripe in Frameworks */,
+				85B6F5F62D9CE89900821086 /* StripePaymentsUI in Frameworks */,
+				85B6F5962D9CE1BD00821086 /* StripeConnect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +159,16 @@
 			);
 			name = TurboKiosk;
 			packageProductDependencies = (
+				85B6F5862D9CDFAB00821086 /* Turbo */,
+				85B6F58F2D9CE1BD00821086 /* Stripe */,
+				85B6F5912D9CE1BD00821086 /* StripeApplePay */,
+				85B6F5932D9CE1BD00821086 /* StripeCardScan */,
+				85B6F5952D9CE1BD00821086 /* StripeConnect */,
+				85B6F5972D9CE1BD00821086 /* StripeFinancialConnections */,
+				85B6F5EF2D9CE89900821086 /* StripeIdentity */,
+				85B6F5F12D9CE89900821086 /* StripePaymentSheet */,
+				85B6F5F32D9CE89900821086 /* StripePayments */,
+				85B6F5F52D9CE89900821086 /* StripePaymentsUI */,
 			);
 			productName = TurboKiosk;
 			productReference = 85B6F5492D9CD86A00821086 /* TurboKiosk.app */;
@@ -195,6 +252,10 @@
 			);
 			mainGroup = 85B6F5402D9CD86A00821086;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				85B6F5762D9CDA2C00821086 /* XCRemoteSwiftPackageReference "turbo-ios" */,
+				85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 85B6F54A2D9CD86A00821086 /* Products */;
 			projectDirPath = "";
@@ -399,11 +460,13 @@
 				DEVELOPMENT_TEAM = 5H3J9H778Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,11 +491,13 @@
 				DEVELOPMENT_TEAM = 5H3J9H778Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -558,6 +623,78 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		85B6F5762D9CDA2C00821086 /* XCRemoteSwiftPackageReference "turbo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/turbo-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.1.0;
+			};
+		};
+		85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stripe/stripe-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85B6F5862D9CDFAB00821086 /* Turbo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F5762D9CDA2C00821086 /* XCRemoteSwiftPackageReference "turbo-ios" */;
+			productName = Turbo;
+		};
+		85B6F58F2D9CE1BD00821086 /* Stripe */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = Stripe;
+		};
+		85B6F5912D9CE1BD00821086 /* StripeApplePay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeApplePay;
+		};
+		85B6F5932D9CE1BD00821086 /* StripeCardScan */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeCardScan;
+		};
+		85B6F5952D9CE1BD00821086 /* StripeConnect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeConnect;
+		};
+		85B6F5972D9CE1BD00821086 /* StripeFinancialConnections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeFinancialConnections;
+		};
+		85B6F5EF2D9CE89900821086 /* StripeIdentity */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripeIdentity;
+		};
+		85B6F5F12D9CE89900821086 /* StripePaymentSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripePaymentSheet;
+		};
+		85B6F5F32D9CE89900821086 /* StripePayments */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripePayments;
+		};
+		85B6F5F52D9CE89900821086 /* StripePaymentsUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 85B6F58E2D9CE1BD00821086 /* XCRemoteSwiftPackageReference "stripe-ios" */;
+			productName = StripePaymentsUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 85B6F5412D9CD86A00821086 /* Project object */;
 }
