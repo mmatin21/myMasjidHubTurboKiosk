@@ -34,6 +34,7 @@ class SessionManager: NSObject, ObservableObject {
     
     // MARK: - Initialization
     override init() {
+        
         // Get base URL from settings or use default
         let baseURLString = UserDefaultsManager.getServerURL()
         let baseURL = URL(string: baseURLString)!
@@ -58,6 +59,9 @@ class SessionManager: NSObject, ObservableObject {
         
         // Start activity monitoring for session timeouts
         startSessionTimeoutMonitoring()
+        print("DEBUG: Using server URL: \(currentURL.absoluteString)")
+
+
     }
     
     // MARK: - Public Methods
@@ -178,7 +182,7 @@ extension SessionManager: SessionDelegate {
                 logout()
             }
         }
-        print("Failed to visit \(visitable.visitableURL) with error: \(error)")
+        print("Failed to visit \(String(describing: visitable.visitableURL)) with error: \(error)")
     }
 }
 

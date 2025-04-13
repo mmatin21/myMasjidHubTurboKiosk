@@ -8,7 +8,7 @@ import Foundation
 
 enum AppConstants {
     // API and backend configuration
-    static let baseURL = "http://localhost:3000"
+    static let baseURL = "https://mymasjidfinder.onrender.com"
     static let kioskEndpoint = "/kiosk"
     
     // Authentication

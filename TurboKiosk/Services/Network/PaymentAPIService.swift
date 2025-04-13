@@ -13,6 +13,7 @@ struct PaymentIntentResponse: Decodable {
 }
 
 class PaymentAPIService {
+    // Original callback-based method
     static func createPaymentIntent(amount: Double, fundraiserId: String, completion: @escaping (Result<PaymentIntentResponse, APIError>) -> Void) {
         let parameters: [String: Any] = [
             "amount": amount,
@@ -25,6 +26,15 @@ class PaymentAPIService {
             parameters: parameters
         ) { (result: Result<PaymentIntentResponse, APIError>) in
             completion(result)
+        }
+    }
+    
+    // New async/await version
+    static func createPaymentIntentAsync(amount: Double, fundraiserId: String) async throws -> PaymentIntentResponse {
+        return try await withCheckedThrowingContinuation { continuation in
+            createPaymentIntent(amount: amount, fundraiserId: fundraiserId) { result in
+                continuation.resume(with: result)
+            }
         }
     }
 }

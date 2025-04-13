@@ -41,6 +41,7 @@ class APIService {
     
     private init() {}
     
+    // Original callback-based method
     func request<T: Decodable>(
         endpoint: String,
         method: String = "GET",
@@ -140,5 +141,18 @@ class APIService {
                 }
             }
         }.resume()
+    }
+    
+    // New async/await version
+    func requestAsync<T: Decodable>(
+        endpoint: String,
+        method: String = "GET",
+        parameters: [String: Any]? = nil
+    ) async throws -> T {
+        return try await withCheckedThrowingContinuation { continuation in
+            request(endpoint: endpoint, method: method, parameters: parameters) { (result: Result<T, APIError>) in
+                continuation.resume(with: result)
+            }
+        }
     }
 }

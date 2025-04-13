@@ -102,7 +102,8 @@ struct PaymentView: View {
         
         let paymentSheet = PaymentSheet(paymentIntentClientSecret: clientSecret, configuration: configuration)
         
-        paymentSheet.present(from: UIApplication.shared.windows.first?.rootViewController ?? UIViewController()) { result in
+        // Use the scene-based window access
+        paymentSheet.present(from: UIWindow.keyViewController ?? UIViewController()) { result in
             isProcessing = false
             
             switch result {

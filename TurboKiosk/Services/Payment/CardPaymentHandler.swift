@@ -30,8 +30,8 @@ class CardPaymentHandler: ObservableObject {
         // Create the payment sheet
         let paymentSheet = PaymentSheet(paymentIntentClientSecret: clientSecret, configuration: configuration)
         
-        // Present the payment sheet
-        paymentSheet.present(from: UIApplication.shared.windows.first?.rootViewController ?? UIViewController()) { result in
+        // Present the payment sheet using scene-based window access
+        paymentSheet.present(from: UIWindow.keyViewController ?? UIViewController()) { result in
             self.isProcessing = false
             
             switch result {
@@ -51,6 +51,15 @@ class CardPaymentHandler: ObservableObject {
             case .failed(let error):
                 self.paymentResult = .failure(error)
                 completion(.failure(error))
+            }
+        }
+    }
+    
+    // Modern async/await version
+    func processPaymentAsync(clientSecret: String) async throws -> String {
+        return try await withCheckedThrowingContinuation { continuation in
+            processPayment(clientSecret: clientSecret) { result in
+                continuation.resume(with: result)
             }
         }
     }
